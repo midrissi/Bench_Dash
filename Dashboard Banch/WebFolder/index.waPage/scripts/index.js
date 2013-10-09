@@ -31,7 +31,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			}
 			
 			$$('ebs_average').setValue(parseInt(ebs_res.average));
-			$$('eph_average').setValue(parseInt(ebs_res.average));
+			$$('eph_average').setValue(parseInt(eph_res.average));
 		}, 700);
 	};
 	
