@@ -1,11 +1,11 @@
 var SERVICES = {
 	EBS: {
-		'private': '10.152.163.97',
-		'public': 'ec2-50-19-203-4.compute-1.amazonaws.com'
+		'private': '@private_adress',
+		'public': '@public_address'
 	},
 	EPH: {
-		'private': '10.147.191.138',
-		'public': 'ec2-23-23-61-47.compute-1.amazonaws.com'
+		'private': '@private_address',
+		'public': '@public_address'
 	}
 };
 
