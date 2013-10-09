@@ -12,8 +12,15 @@ WAF.onAfterInit = function onAfterInit() { // @lock
 
 	function msToTime(s) {
 
-		function addZ(n) {
-			return (n < 10 ? '0' : '') + n;
+		function castTo(n, length) {
+			var res = n + '';
+			
+			length = length || 2;
+			
+			while(res.length < 0){
+				res = '0' + res;
+			}
+			return res;
 		}
 
 		var ms = s % 1000;
@@ -23,7 +30,7 @@ WAF.onAfterInit = function onAfterInit() { // @lock
 		var mins = s % 60;
 		var hrs = (s - mins) / 60;
 
-		return addZ(hrs) + ':' + addZ(mins) + ':' + addZ(secs) + ' ' + ms;
+		return castTo(hrs) + 'h ' + castTo(mins) + 'min ' + castTo(secs) + 's ' + castTo(ms,3);
 	}
 
 	function render(status) {
