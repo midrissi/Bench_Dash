@@ -17,7 +17,7 @@ WAF.onAfterInit = function onAfterInit() { // @lock
 			
 			length = length || 2;
 			
-			while(res.length < 0){
+			while(res.length < length){
 				res = '0' + res;
 			}
 			return res;
